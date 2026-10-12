@@ -1,0 +1,11 @@
+{
+  "name": "Remix CIR",
+  "description": "Civic issue reporting and NGO coordination platform for Indian citizens with AI classification, SLA escalation engine, resolution verification, and multilingual support.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

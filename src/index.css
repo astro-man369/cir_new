@@ -1,0 +1,281 @@
+@import "tailwindcss";
+
+@layer base {
+  html, body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 14px;
+    line-height: 1.5;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  html.dark, html:not(.light) {
+    background-color: #0b0f19;
+    color: #f1f5f9;
+  }
+
+  html.light {
+    background-color: #f8fafc;
+    color: #0f172a;
+  }
+
+  /* --- LIGHT THEME COMPREHENSIVE OVERRIDES --- */
+  html.light body {
+    background-color: #f1f5f9; /* Slate 100 - soft, coherent page background */
+    color: #0f172a;
+  }
+
+  /* Header & Navbar in Light Theme */
+  html.light header {
+    background-color: rgba(255, 255, 255, 0.92) !important;
+    border-color: #e2e8f0 !important;
+    color: #0f172a !important;
+  }
+
+  /* Outer Cards & Main Content Surfaces (.bg-slate-900) */
+  html.light .bg-slate-900,
+  html.light .bg-slate-900\/90,
+  html.light .bg-slate-900\/80 {
+    background-color: #ffffff !important;
+    border-color: #e2e8f0 !important;
+    color: #0f172a !important;
+    box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.03);
+  }
+
+  /* Recessed Inner Containers & Input Boxes (.bg-slate-950) */
+  html.light .bg-slate-950,
+  html.light .bg-slate-950\/80,
+  html.light .bg-slate-950\/60 {
+    background-color: #f8fafc !important; /* Soft Slate 50 background */
+    border-color: #e2e8f0 !important;
+    color: #0f172a !important;
+  }
+
+  /* Clickable Elements, Secondary Buttons, Chips & Badges (.bg-slate-800) */
+  html.light .bg-slate-800,
+  html.light .bg-slate-800\/80,
+  html.light .bg-slate-800\/60 {
+    background-color: #f1f5f9 !important; /* Slate 100 soft fill */
+    border-color: #cbd5e1 !important;
+    color: #1e293b !important;
+  }
+
+  /* Interactive Hover States in Light Theme */
+  html.light .hover\:bg-slate-800:hover,
+  html.light .hover\:bg-slate-700:hover {
+    background-color: #e2e8f0 !important; /* Slate 200 hover fill */
+    color: #0f172a !important;
+  }
+
+  html.light .hover\:bg-slate-900:hover,
+  html.light .hover\:bg-slate-950:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+  }
+
+  /* Navigation Tabs Container & Active Tab in Light Theme */
+  html.light nav.bg-slate-950 {
+    background-color: #e2e8f0 !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  html.light nav button.bg-slate-800 {
+    background-color: #ffffff !important;
+    color: #ea580c !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+  }
+
+  html.light nav button.text-slate-400 {
+    color: #475569 !important;
+  }
+
+  html.light nav button.hover\:text-white:hover {
+    color: #0f172a !important;
+  }
+
+  /* Preserve White Text on Solid Accent Primary Buttons */
+  html.light .bg-orange-600,
+  html.light .bg-orange-500,
+  html.light .bg-emerald-600,
+  html.light .bg-emerald-500,
+  html.light .bg-sky-600,
+  html.light .bg-sky-500,
+  html.light .bg-purple-600,
+  html.light .bg-rose-600,
+  html.light button.bg-orange-600,
+  html.light button.bg-orange-500,
+  html.light button.bg-emerald-600 {
+    color: #ffffff !important;
+  }
+
+  html.light .bg-orange-600 .text-white,
+  html.light .bg-orange-500 .text-white,
+  html.light .bg-emerald-600 .text-white,
+  html.light .bg-sky-600 .text-white {
+    color: #ffffff !important;
+  }
+
+  /* General Text Color Mappings for Light Mode */
+  html.light h1,
+  html.light h2,
+  html.light h3,
+  html.light h4,
+  html.light .text-white,
+  html.light .text-slate-100,
+  html.light .text-slate-200 {
+    color: #0f172a !important;
+  }
+
+  html.light .text-slate-300 {
+    color: #334155 !important;
+  }
+
+  html.light .text-slate-400 {
+    color: #475569 !important;
+  }
+
+  html.light .text-slate-500 {
+    color: #64748b !important;
+  }
+
+  /* Status Accent Colors in Light Mode */
+  html.light .text-orange-400,
+  html.light .text-orange-300 {
+    color: #ea580c !important;
+  }
+
+  html.light .text-emerald-400,
+  html.light .text-emerald-300 {
+    color: #059669 !important;
+  }
+
+  html.light .text-sky-400,
+  html.light .text-sky-300 {
+    color: #0284c7 !important;
+  }
+
+  html.light .text-amber-400,
+  html.light .text-amber-300 {
+    color: #d97706 !important;
+  }
+
+  html.light .text-purple-400,
+  html.light .text-purple-300 {
+    color: #7c3aed !important;
+  }
+
+  html.light .text-rose-400,
+  html.light .text-rose-300 {
+    color: #dc2626 !important;
+  }
+
+  /* Form Elements in Light Mode */
+  html.light input,
+  html.light select,
+  html.light textarea {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #cbd5e1 !important;
+  }
+
+  html.light input::placeholder,
+  html.light textarea::placeholder {
+    color: #94a3b8 !important;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  button, input, select, textarea {
+    font-family: inherit;
+  }
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    flex-shrink: 0;
+  }
+
+  /* --- LEAFLET MAP MARKERS & POPUP CUSTOM STYLING --- */
+  .leaflet-div-icon.custom-issue-pin,
+  .leaflet-div-icon.custom-ngo-pin,
+  .leaflet-div-icon.custom-event-pin {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .cir-pin-wrapper {
+    transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.2s ease;
+    will-change: transform;
+    cursor: pointer;
+  }
+
+  .cir-pin-wrapper:hover {
+    transform: translateY(-4px) scale(1.12);
+    z-index: 1000 !important;
+  }
+
+  .leaflet-popup-content-wrapper {
+    background: #0f172a !important;
+    color: #f8fafc !important;
+    border: 1px solid #334155 !important;
+    border-radius: 18px !important;
+    padding: 0 !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5) !important;
+    overflow: hidden !important;
+  }
+
+  .leaflet-popup-content {
+    margin: 0 !important;
+    line-height: 1.4 !important;
+  }
+
+  .leaflet-popup-tip {
+    background: #0f172a !important;
+    border: 1px solid #334155 !important;
+  }
+
+  .leaflet-container a.leaflet-popup-close-button {
+    color: #94a3b8 !important;
+    top: 8px !important;
+    right: 8px !important;
+    padding: 4px !important;
+    background: rgba(15, 23, 42, 0.8) !important;
+    border-radius: 9999px !important;
+    width: 22px !important;
+    height: 22px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border: 1px solid #334155 !important;
+  }
+
+  .leaflet-container a.leaflet-popup-close-button:hover {
+    color: #ffffff !important;
+    background: #ea580c !important;
+    border-color: #ea580c !important;
+  }
+}
+
